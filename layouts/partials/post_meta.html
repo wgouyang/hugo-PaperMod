@@ -15,3 +15,7 @@
 {{- with ($scratch.Get "meta")}}
 {{- delimit . "&nbsp;·&nbsp;"}}
 {{- end }}
+
+{{- if isset .Params "affiliatelink" }}
+&nbsp;&nbsp;<code>↗</code>
+{{- end}}

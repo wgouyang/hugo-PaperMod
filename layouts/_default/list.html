@@ -59,7 +59,11 @@
     {{- partial "post_meta.html" . -}}
   </footer>
   {{- end }}
-  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  {{ if isset .Params "affiliatelink" }}
+    <a target="_blank" class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Params.affiliatelink }}"></a>
+  {{else}}
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  {{ end }}
 </article>
 {{- end }}
 
