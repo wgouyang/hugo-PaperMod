@@ -35,7 +35,7 @@
   {{- end }}
   <div class="post-content">
     {{ if isset .Params "affiliatelink" }}
-      This is an external article, please <a target="_blank" href="{{ .Params.affiliatelink }}">click</a> here to continue.
+      This is an external article, please click <a target="_blank" href="{{ .Params.affiliatelink }}">here</a> to continue.
     {{ end }}
     {{- partial "anchored_headings.html" .Content -}}
   </div>
